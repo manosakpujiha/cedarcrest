@@ -1,15 +1,83 @@
-/*todo:*/
+/*color palette*/
+:root {
+    --color-primary: rgb(0,38,89);
+    --color-secondary: rgb(232,148,53);
+    --color-accent: rgb(153,168,189);
+    --color-reverse: rgb(255,255,255);
+}
 
 
-
-
-
-.banner {
-    color: rgb(0,38,89);
+/* banner  */
+.slidingBanner {
+    color: var(--color-primary);
     font-family: monospace;
     font-weight: 700;
     font-size: larger;
-
-
+    min-height: 2rem;
 } 
+
+/*navBar1*/
+
+.navBar1 {
+    background-color: var(--color-primary);
+    color:var(--color-reverse);
+    text-align: center;
+    height: 9.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navBar1 li {
+    margin-bottom: 0.2rem;
+}
+
+.address, .otherHospitals  {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.otherHospitals li {
+    display: inline;
+}
+
+.address li  {
+    margin-bottom:2rem;
+}
+
+.navBar1 a {
+    color: var(--color-reverse);
+    text-decoration: none;
+}
+.navBar1 a:hover {
+    color: var(--color-accent);
+}
+
+
+@media screen and (min-width: 1240px) {
+    .address li {
+        display: inline;
+    }
+
+    .navBar1 {
+        height: 2rem;
+        padding-bottom: 1rem;
+    }
+    .address {
+        float: left;
+    }
+
+    #liOne, #litwo{
+        margin-left:3rem;
+        margin-right: 3rem;
+        
+    }
+.otherHospitals{
+    float: right;
+    margin-right: 1rem;
+}
+}
+
 
