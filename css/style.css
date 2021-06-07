@@ -1,3 +1,8 @@
+
+
+
+
+
 /*color palette*/
 :root {
     --color-primary: rgb(0,38,89);
@@ -5,6 +10,21 @@
     --color-accent: rgb(153,168,189);
     --color-reverse: rgb(255,255,255);
 }
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
+}
+
+/* *, *::after, *::before {
+  box-sizing: border-box;
+} */
+
 
 
 /* banner  */
@@ -69,15 +89,153 @@
         float: left;
     }
 
-    #liOne, #litwo{
+    #liOne, #litwo {
         margin-left:3rem;
         margin-right: 3rem;
         
     }
-.otherHospitals{
-    float: right;
-    margin-right: 1rem;
-}
+
+    .otherHospitals {
+        float: right;
+        margin-right: 1rem;
+    }
 }
 
 
+/*navBar2*/
+
+/* Collapsibles */
+
+.collapsible__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .collapsible__heading {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+  
+  .collapsible__chevron {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+  }
+  
+  .collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  .collapsible--expanded .collapsible__chevron {
+    transform: rotate(0);
+  }
+  
+  .collapsible--expanded .collapsible__content {
+    max-height: 100%;
+    opacity: 1;
+  }
+
+/* NavBar 2 */
+
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  .nav__list {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nav__item {
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #222;
+  }
+  
+  .nav__item:last-of-type {
+    border-bottom: none;
+  }
+  
+  .nav__item>a {
+    color: #d2d0db;
+    transition: color 0.3s;
+  }
+  
+  .nav__item>a:hover {
+    color: #fff;
+  }
+  
+  .nav__toggler {
+    opacity: 0.5;
+    transition: box-shadow 0.15s;
+    cursor: pointer;
+  }
+  
+  .nav.collapsible--expanded .nav__toggler {
+    opacity: 1;
+    box-shadow: 0 0 0 3px #666;
+    border-radius: 5px;
+  }
+  
+  .nav__brand {
+    transform: translateY(5px);
+    width: 150px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .nav__toggler {
+      display: none;
+    }
+    .nav__list {
+      width: auto;
+      display: flex;
+      font-size: 1.6rem;
+      max-height: 100%;
+      opacity: 1;
+    }
+    .nav__item {
+      border: 0;
+    }
+  }
+
+
+  /* Icons */
+
+.icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon--small {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .icon--primary {
+    fill: var(--color-primary);
+  }
+  
+  .icon--white {
+    fill: #fff;
+  }
+  
+  .icon-container {
+    background: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-container--accent {
+    background: var(--color-accent);
+  }
+  
