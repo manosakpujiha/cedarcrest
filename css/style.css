@@ -233,11 +233,19 @@
     fill: var(--color-black);
   }
 
+
+  div#sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
   /* navBar2 2nd attempt */
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   margin: 1rem 1rem 1rem 1rem;
 }
@@ -384,8 +392,7 @@ margin: 0 3rem;
   background-color: var(--color-primary);
   color: white;
   display:flex;
-
-  position: absolute;
+  position: relative;
   left: 68%;
   width: 26%;
   margin-top: 0;
@@ -401,6 +408,42 @@ margin: 0 3rem;
   height: 1rem;
 }
 
+/* Image Gallery */
+.picture {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+ #mainImage {
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  z-index: 0;  
+}
+
+
+#pointerRight {
+ position: absolute;
+ top: 50%;
+ right: 3rem;
+ z-index: 100;
+
+}
+
+#pointerLeft {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  z-index: 100;
+ }
+
+ #back2top {
+  position: fixed;
+  top: 90%;
+  right: 4rem;
+  z-index: 100;
+ }
 
 
 
