@@ -5,7 +5,7 @@
  
   --color-primary: rgb(0,38,89);
   --color-primary2: rgb(102,136,145);
-  --color-secondary: rgb(232,148,53);
+  --color-secondary: rgb(197,165,71);
   --color-accent: rgb(153,168,189);
   --color-reverse: rgb(255,255,255);
   --color-black: rgb(0,0,0);
@@ -435,15 +435,57 @@ margin: 0 3rem;
   position: absolute;
   top: 50%;
   left: 3rem;
-  z-index: 100;
+  z-index: 10;
  }
 
  #back2top {
   position: fixed;
   top: 90%;
   right: 4rem;
-  z-index: 100;
+  z-index: 10;
  }
 
 
+ /* mission Statement */
+.missionStatement {
+  margin: 5rem 0 0 0;
+}
+.mediaContainer1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 10rem
+}
+.media1 {
+  border: 0.01px solid;
+  border-color: var(--color-primary2);
+  box-shadow: #222;
+  padding: 1rem;
+  margin: 0;
+  width: 25vw;
+  height: 40vh;
+}
 
+
+.media__img1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.media__text1{
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.media__text21{
+  font-size: 1rem;
+  color: var(--color-primary2);
+}
+
+.media__text31 {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
